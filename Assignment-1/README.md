@@ -1,0 +1,1 @@
+# Screenshots and uploaded files.
