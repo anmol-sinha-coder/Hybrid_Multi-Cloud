@@ -1,5 +1,6 @@
 # Hybrid_Multi-Cloud 
-![CLoud_base](https://thumbs.gfycat.com/CompassionateSecretGodwit-max-1mb.gif)
+![CLoud_base](https://thumbs.gfycat.com/CompassionateSecretGodwit-max-1mb.gif) ![New](https://www.researchgate.net/profile/Antonius_Wijanarto/publication/279181777/figure/fig2/AS:294433330352130@1447209784914/GIS-Cloud-Architecture-15.png)
+
 Cloud computing is the on-demand availability of computer system resources, especially data storage (cloud storage) and computing power, without direct active management by the user. The term is generally used to describe data centers available to many users over the Internet. Large clouds, predominant today, often have functions distributed over multiple locations from central servers. If the connection to the user is relatively close, it may be designated an edge server.
 
 Multicloud is the use of multiple cloud computing and storage services in a single heterogeneous architecture. This also refers to the distribution of cloud assets, software, applications, etc. across several cloud-hosting environments. With a typical multicloud architecture utilizing two or more public clouds as well as multiple private clouds, a multicloud environment aims to eliminate the reliance on any single cloud provider. It differs from hybrid cloud in that it refers to multiple cloud services rather than multiple deployment modes (public, private, legacy).
