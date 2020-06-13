@@ -131,7 +131,7 @@ ________________________________________________________________________________
 * Everything should work correctly, refer the screenshots for any necessary reference. I have used PuTTy software to run SSH on my Redhat_Linux type OS running on AWS.
 * Congratulations, you have just implemented a Multi-cloud architecture platform, with the use of structured frameworks such as Apche WebServer(httpd) and Centralized Version Control System (CVCS) git.
 * Mind the dependencies, which ensure the order of execution of tasks. You cannot have a repository cloned into your local system without there existing a memory-disk in the first place !
-* How about going one step further? Have your own Linux (**Fedora-** Redhat/CentOS)(**Debian-** Ubuntu/Debian_GNU), then you can run Jenkins easily to execute your created 'terra.tf' file.
+* How about going one step further? Have your own Linux (**Fedora-** Redhat/CentOS) (**Debian-** Ubuntu/Debian_GNU), then you can run Jenkins easily to execute your created *'terra.tf'* file. This will work with both VM(Virtual Machine) running on VirtualBox or VMWare, as well as, Dual (or Multiple) Boot.
 * Instead of Poll SCM, use of Github's Webhooks would be better to trigger builds.
 	<img src="https://www.edureka.co/blog/wp-content/uploads/2016/11/Jenkins-4.gif" width=300 height=200></img>
 _________________________________________________________________________________________________________________
