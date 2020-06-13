@@ -14,7 +14,6 @@ ________________________________________________________________________________
 * Now that the essential websites ave been covered, it is essential that one must write the terraform code. Create a file **terra.tf** or any file name you want. Use a basic text editor type out the following :-
 ___________________________________________________________________________________________________________________________
 
-		// Terraform code
 	provider "aws" { 
 	  version = "~> 2.66"
 	  shared_credentials_file = file("~/.aws/credentials")
@@ -119,4 +118,14 @@ ________________________________________________________________________________
 		    command = "chrome  ${aws_instance.web.public_ip}"
 		}
 	}
-* Now save the file in 
+* Ensure that your installed **terraform.exe** is in environment variables (for Windows-10). If not, type *Windows*+*R* keys to execute *Run*. Type 'sysdm.cpl' in the input box. In the appearing dialog box, go to advanced tab (top middle), and then go to 'Environment Variables' in the bottom right.
+* Finally go to the *User Variables* option **Path** and create a new variable. Add the current location of the 'terraform.exe' file into the input bar at the bottom of Path dialog box. Click OK to save.
+* Now save the file in a new directory (preferably). Lets call this directory 'TF'. Now we must initialize the directory. Then check for correctness of code. Finally we have to run the code. In the future destroying of code may be necessary, as well.
+```diff
+# terraform init
+# terraform validate
+# terraform apply
+
+# terraform destroy
+```
+* Everything should work correctly, refer the screenshots for any necessary reference. I have used PuTTy software to run SSH on my Redhat_Linux type OS running on AWS.
