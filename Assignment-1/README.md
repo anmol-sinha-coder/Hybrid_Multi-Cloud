@@ -133,7 +133,8 @@ ________________________________________________________________________________
 * Mind the dependencies, which ensure the order of execution of tasks. You cannot have a repository cloned into your local system without there existing a memory-disk in the first place !
 * How about going one step further? Have your own Linux (**Fedora-** Redhat/CentOS)(**Debian-** Ubuntu/Debian_GNU), then you can run Jenkins easily to execute your created 'terra.tf' file.
 * Instead of Poll SCM, use of Github's Webhooks would be better to trigger builds.
-<img src="https://www.edureka.co/blog/wp-content/uploads/2016/11/Jenkins-4.gif" width=300 height=200>
+<img src="https://www.edureka.co/blog/wp-content/uploads/2016/11/Jenkins-4.gif" width=300 height=200></img>
+
 ```diff
 ---------------------------------------------------------------------------------------------------------------------------------
 ! Author :
