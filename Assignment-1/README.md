@@ -13,110 +13,110 @@ ________________________________________________________________________________
 <img src="https://www.parkmycloud.com/wp-content/uploads/terraform-x-aws-1.png" height=200 width=300>
 * Now that the essential websites ave been covered, it is essential that one must write the terraform code. Create a file **terra.tf** or any file name you want. Use a basic text editor type out the following :-
 ___________________________________________________________________________________________________________________________
-```diff
-provider "aws" { 
-  version = "~> 2.66"
-  shared_credentials_file = file("~/.aws/credentials")
-  region = "us-east-1"
-  profile = "anmol" // any name would do here
-}
+
+		// Terraform code
+	provider "aws" { 
+	  version = "~> 2.66"
+	  shared_credentials_file = file("~/.aws/credentials")
+	  region = "us-east-1"
+	  profile = "anmol" // any name would do here
+	}
 
 
-resource "aws_instance" "web" {
-  ami           = "ami-01d025118d8e760db"
-  instance_type = "t2.micro"
-  key_name = "My_SSH"
-  security_groups = [ "launch-wizard-2" ]
+	resource "aws_instance" "web" {
+	  ami           = "ami-01d025118d8e760db"
+	  instance_type = "t2.micro"
+	  key_name = "My_SSH"
+	  security_groups = [ "launch-wizard-2" ]
 
-  connection {
-    type     = "ssh"
-    user     = "ec2-user"
-    private_key = file("~/Desktop/My_SSH.pem")
-    host     = aws_instance.web.public_ip
-  }
+	  connection {
+	    type     = "ssh"
+	    user     = "ec2-user"
+	    private_key = file("~/Desktop/My_SSH.pem")
+	    host     = aws_instance.web.public_ip
+	  }
 
-  provisioner "remote-exec" {
-    inline = [
-      "sudo yum install httpd git -y",
-      "sudo systemctl restart httpd",
-      "sudo systemctl enable httpd",
-    ]
-  }
+	  provisioner "remote-exec" {
+	    inline = [
+	      "sudo yum install httpd git -y",
+	      "sudo systemctl restart httpd",
+	      "sudo systemctl enable httpd",
+	    ]
+	  }
 
-  tags = {
-    Name = "terraform-automation"
-  }
+	  tags = {
+	    Name = "terraform-automation"
+	  }
 
-}
-
-
-resource "aws_ebs_volume" "EBS" {
-  availability_zone = aws_instance.web.availability_zone
-  size              = 1
-
-  tags = {
-    Name = "terraform-automation"
-  }
-}
+	}
 
 
-resource "aws_volume_attachment" "ebs_att" {
-  device_name = "/dev/sdh"
-  volume_id   = aws_ebs_volume.EBS.id //"${aws_ebs_volume.EBS.id}"
-  instance_id = aws_instance.web.id //"${aws_instance.web.id}"
-  force_detach = true
-}
+	resource "aws_ebs_volume" "EBS" {
+	  availability_zone = aws_instance.web.availability_zone
+	  size              = 1
+
+	  tags = {
+	    Name = "terraform-automation"
+	  }
+	}
 
 
-output "myos_ip" {
-  value = aws_instance.web.public_ip
-}
+	resource "aws_volume_attachment" "ebs_att" {
+	  device_name = "/dev/sdh"
+	  volume_id   = aws_ebs_volume.EBS.id //"${aws_ebs_volume.EBS.id}"
+	  instance_id = aws_instance.web.id //"${aws_instance.web.id}"
+	  force_detach = true
+	}
 
 
-resource "null_resource" "nulllocal2"  {
-	provisioner "local-exec" {
-	    command = "echo  ${aws_instance.web.public_ip} > publicip.txt"
-  	}
-}
+	output "myos_ip" {
+	  value = aws_instance.web.public_ip
+	}
 
 
-
-resource "null_resource" "nullremote3"  {
-
-depends_on = [
-    aws_volume_attachment.ebs_att,
-  ]
-
-
-  connection {
-    type     = "ssh"
-    user     = "ec2-user"
-    private_key = file("~/Desktop/My_SSH.pem")
-    host     = aws_instance.web.public_ip
-  }
-
-provisioner "remote-exec" {
-    inline = [
-      "sudo mkfs.ext4  /dev/xvdh",
-      "sudo mount  /dev/xvdh  /var/www/html",
-      "sudo rm -rf /var/www/html/*",
-      "sudo git clone https://github.com/anmol-sinha-coder/Hybrid_Multi-Cloud.git /var/www/html/"
-    ]
-  }
-}
+	resource "null_resource" "nulllocal2"  {
+		provisioner "local-exec" {
+		    command = "echo  ${aws_instance.web.public_ip} > publicip.txt"
+		}
+	}
 
 
 
-resource "null_resource" "nulllocal1"  {
+	resource "null_resource" "nullremote3"  {
+
+	depends_on = [
+	    aws_volume_attachment.ebs_att,
+	  ]
 
 
-depends_on = [
-    null_resource.nullremote3,
-  ]
+	  connection {
+	    type     = "ssh"
+	    user     = "ec2-user"
+	    private_key = file("~/Desktop/My_SSH.pem")
+	    host     = aws_instance.web.public_ip
+	  }
 
-	provisioner "local-exec" {
-	    command = "chrome  ${aws_instance.web.public_ip}"
-  	}
-}
-```
+	provisioner "remote-exec" {
+	    inline = [
+	      "sudo mkfs.ext4  /dev/xvdh",
+	      "sudo mount  /dev/xvdh  /var/www/html",
+	      "sudo rm -rf /var/www/html/*",
+	      "sudo git clone https://github.com/anmol-sinha-coder/Hybrid_Multi-Cloud.git /var/www/html/"
+	    ]
+	  }
+	}
+
+
+
+	resource "null_resource" "nulllocal1"  {
+
+
+	depends_on = [
+	    null_resource.nullremote3,
+	  ]
+
+		provisioner "local-exec" {
+		    command = "chrome  ${aws_instance.web.public_ip}"
+		}
+	}
 * Now save the file in 
