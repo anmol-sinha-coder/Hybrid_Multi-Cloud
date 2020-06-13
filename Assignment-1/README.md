@@ -136,19 +136,33 @@ ________________________________________________________________________________
 <img src="https://www.edureka.co/blog/wp-content/uploads/2016/11/Jenkins-4.gif" width=300 height=200></img>
 _________________________________________________________________________________________________________________
 ## Summary and Conclusion:
+
 [1] Recap of the '.tf' file keywords like 'resource', 'variable', 'output'.
+
 [2] Discussion of 'provisioner' in terraform to run command prompt /shell script commands.
+
 [3] Explanation of provisioner's Necessity to work inside resource blocks.
+
 [4] Use of null resource in running a provisioner in the local system.
+
 [5] Discussion on types of provisioner - remote and local, to execute arguments for system shells or reverse shells in remote system.
+
 [6] Use of terraform docs, to look for syntax of instances and configuration.
+
 [7] Discussion on complete automation of cloud based activities by use of terraform.
+
 [8] Basic use of terraform commands 'init', 'validate', 'apply' , and 'delete'.
+
 [9] Explanation of Necessity to make the terraform and the private/public cloud like AWS, capable of both creation as well as destruction of the architecture.
+
 [10] Use of terraform arguments like 'auto-approve' to prevent need of user's presence while automating via Jenkins.
+
 [11] Use of 'force-delete' assignment to 'True' for real time use in testing environment for an EBS Volume.
+
 [12] Concept of devices, partitioning, and mounting, and explanation of device as being busy/used when mounted.
+
 [13] Concept of dependency in terraform to prevent resources being pulled from github/CVCS before actual Volume/memory disk creation.
+
 [14] Automation with Jenkins using Github-Webhooks and posting file pushed information to *JENKINS_URL/github-webhook* for CI/CD with automated frameworks.
 
 ```diff
