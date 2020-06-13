@@ -134,9 +134,24 @@ ________________________________________________________________________________
 * How about going one step further? Have your own Linux (**Fedora-** Redhat/CentOS)(**Debian-** Ubuntu/Debian_GNU), then you can run Jenkins easily to execute your created 'terra.tf' file.
 * Instead of Poll SCM, use of Github's Webhooks would be better to trigger builds.
 <img src="https://www.edureka.co/blog/wp-content/uploads/2016/11/Jenkins-4.gif" width=300 height=200></img>
+_________________________________________________________________________________________________________________
+## Summary and Conclusion:
+• Recap of the '.tf' file keywords like 'resource', 'variable', 'output'.
+• Discussion of 'provisioner' in terraform to run command prompt /shell script commands.
+• Explanation of provisioner's Necessity to work inside resource blocks.
+• Use of null resource in running a provisioner in the local system.
+• Discussion on types of provisioner - remote and local, to execute arguments for system shells or reverse shells in remote system.
+• Use of terraform docs, to look for syntax of instances and configuration.
+• Discussion on complete automation of cloud based activities by use of terraform.
+• Basic use of terraform commands 'init', 'validate', 'apply' , and 'delete'.
+• Explanation of Necessity to make the terraform and the private/public cloud like AWS, capable of both creation as well as destruction of the architecture.
+• Use of terraform arguments like 'auto-approve' to prevent need of user's presence while automating via Jenkins.
+• Use of 'force-delete' assignment to 'True' for real time use in testing environment for an EBS Volume.
+• Concept of devices, partitioning, and mounting, and explanation of device as being busy/used when mounted.
+• Concept of dependency in terraform to prevent resources being pulled from github/CVCS before actual Volume/memory disk creation. 
 
 ```diff
----------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
 ! Author :
 +  Anmol Sinha | 1805553@kiit.ac.in
 ```
