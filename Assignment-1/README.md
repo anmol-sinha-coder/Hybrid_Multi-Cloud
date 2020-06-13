@@ -118,6 +118,7 @@ ________________________________________________________________________________
 		    command = "chrome  ${aws_instance.web.public_ip}"
 		}
 	}
+_____________________________________________________________________________________________________________________________
 * Ensure that your installed **terraform.exe** is in environment variables (for Windows-10). If not, type *Windows*+*R* keys to execute *Run*. Type 'sysdm.cpl' in the input box. In the appearing dialog box, go to advanced tab (top middle), and then go to 'Environment Variables' in the bottom right.
 * Finally go to the *User Variables* option **Path** and create a new variable. Add the current location of the 'terraform.exe' file into the input bar at the bottom of Path dialog box. Click OK to save.
 * Now save the file in a new directory (preferably). Lets call this directory 'TF'. Now we must initialize the directory. Then check for correctness of code. Finally we have to run the code. In the future destroying of code may be necessary, as well.
