@@ -129,3 +129,9 @@ ________________________________________________________________________________
 # terraform destroy
 ```
 * Everything should work correctly, refer the screenshots for any necessary reference. I have used PuTTy software to run SSH on my Redhat_Linux type OS running on AWS.
+* Congratulations, you have just implemented a Multi-cloud architecture platform, with the use of structured frameworks such as Apche WebServer(httpd) and Centralized Version Control System (CVCS) git.
+```diff
+---------------------------------------------------------------------------------------------------------------------------------
+! Author :
++  Anmol Sinha | 1805553@kiit.ac.in
+```
