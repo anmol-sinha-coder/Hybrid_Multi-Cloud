@@ -1,4 +1,4 @@
-# <img src="https://www.terraform.io/assets/images/og-image-8b3e4f7d.png" height=200 width=200> Terraform 
+# <img src="https://www.terraform.io/assets/images/og-image-8b3e4f7d.png" height=200 width=200></img> Terraform 
 
 Terraform is an open-source infrastructure as code software tool created by HashiCorp. It enables users to define and provision a datacenter infrastructure using a high-level configuration language known as Hashicorp Configuration Language (HCL), or optionally JSON.Terraform supports a number of cloud infrastructure providers such as Amazon Web Services, IBM Cloud (formerly Bluemix), Google Cloud Platform, DigitalOcean, Linode, Microsoft Azure, Oracle Cloud Infrastructure, OVH, Scaleway, VMware vSphere or Open Telekom Cloud as well as OpenNebula and OpenStack. Terraform is created in Google's Go language, with its latest stable version being 0.12.26/May27-2020.
 _________________________________________________________________________________________________________________________
@@ -133,7 +133,7 @@ ________________________________________________________________________________
 * Mind the dependencies, which ensure the order of execution of tasks. You cannot have a repository cloned into your local system without there existing a memory-disk in the first place !
 * How about going one step further? Have your own Linux (**Fedora-** Redhat/CentOS)(**Debian-** Ubuntu/Debian_GNU), then you can run Jenkins easily to execute your created 'terra.tf' file.
 * Instead of Poll SCM, use of Github's Webhooks would be better to trigger builds.
-<img src="https://www.edureka.co/blog/wp-content/uploads/2016/11/Jenkins-4.gif" width=300 height=200></img>
+	<img src="https://www.edureka.co/blog/wp-content/uploads/2016/11/Jenkins-4.gif" width=300 height=200></img>
 _________________________________________________________________________________________________________________
 ## Summary and Conclusion:
 
