@@ -10,8 +10,9 @@ ________________________________________________________________________________
 * Further use of terraform keywords like 'resources', 'provisioner', instance_type and others a document is created with reference link-->[click here](https://www.terraform.io/docs/configuration/resources.html)
 * Often providing ouput is essential, and the right keywords must be known; for reference -->[click here](https://www.terraform.io/docs/configuration/outputs.html)
 * An EBS volume must also be provided like a default external hard-disk for the system. The resource can be mentioned as follows -->[click here](https://www.terraform.io/docs/providers/aws/r/ebs_volume.html)
-<img src="https://www.parkmycloud.com/wp-content/uploads/terraform-x-aws-1.png" height=200 width=200>
+<img src="https://www.parkmycloud.com/wp-content/uploads/terraform-x-aws-1.png" height=200 width=300>
 * Now that the essential websites ave been covered, it is essential that one must write the terraform code. Create a file **terra.tf** or any file name you want. Use a basic text editor type out the following :-
+___________________________________________________________________________________________________________________________
 ```diff
 provider "aws" { 
   version = "~> 2.66"
