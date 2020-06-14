@@ -134,7 +134,7 @@ ________________________________________________________________________________
 * Mind the dependencies, which ensure the order of execution of tasks. You cannot have a repository cloned into your local system without there existing a memory-disk in the first place !
 * How about going one step further? Have your own Linux (**Fedora-** Redhat/CentOS) (**Debian-** Ubuntu/Debian_GNU), then you can run Jenkins easily to execute your created *'terra.tf'* file. This will work with both VM(Virtual Machine) running on VirtualBox or VMWare, as well as, Dual (or Multiple) Boot.
 * Instead of Poll SCM, use of Github's Webhooks would be better to trigger builds.
-	<img src="https://www.edureka.co/blog/wp-content/uploads/2016/11/Jenkins-4.gif" width=300 height=200></img>
+	<img src="https://www.edureka.co/blog/wp-content/uploads/2016/11/Jenkins-4.gif" width=400 height=300></img>
 * Now lets create Security Groups, reroute TCP traffic, such as HTTP, for reference -->[click here](https://www.terraform.io/docs/providers/aws/r/security_group.html)
 * Amazon Simple Storage Service is storage for the Internet. It is designed to make web-scale computing easier for developers. -->[click here](https://www.terraform.io/docs/providers/aws/r/s3_bucket.html)
 * Essentially one can use image, video and other static files for S3, while DynamoDB is used for Relational Database storage.-->[click here](https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html)
