@@ -416,7 +416,7 @@ ________________________________________________________________________________
 
 
 _________________________________________________________________________________________________________________
-<img src="https://d2908q01vomqb2.cloudfront.net/ca3512f4dfa95a03169c5a670a4c91a19b3077b4/2019/12/14/Architecture2.png" width=800 height=400>
+<img src="https://d2908q01vomqb2.cloudfront.net/ca3512f4dfa95a03169c5a670a4c91a19b3077b4/2019/12/14/Architecture2.png" width=800 height=400> </img>
 ## Summary and Conclusion:
 
 [1] Recap of the '.tf' file keywords like 'resource', 'variable', 'output'.
