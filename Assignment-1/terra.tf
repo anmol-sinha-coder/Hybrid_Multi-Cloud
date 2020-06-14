@@ -64,7 +64,6 @@ resource "null_resource" "nulllocal2"  {
 }
 
 
-
 resource "null_resource" "nullremote3"  {
 
 depends_on = [
