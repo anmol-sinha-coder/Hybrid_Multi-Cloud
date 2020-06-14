@@ -12,7 +12,6 @@ resource "tls_private_key" "AWS_img_key" {
 }
 
 
-
 resource "local_file" "kingston" {
     filename = "My_SSH.pem"
 }
