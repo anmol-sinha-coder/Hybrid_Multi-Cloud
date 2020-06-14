@@ -447,6 +447,13 @@ ________________________________________________________________________________
 
 [14] Automation with Jenkins using Github-Webhooks and posting file pushed information to *JENKINS_URL/github-webhook* for CI/CD with automated frameworks.
 
+[15] S3 is an object type of storage why called object it's just because here in S3 a file is called an OBJECT.
+Folder here is know as BUCKET.
+
+[16] In Cloud Front, Edge network basically is small Data Centre spread at various locations whenever a user requests for a file ( possible it is big ) so latency may occur these edge networks then come to action the nearest edge would share the data then. Edge network is a CDN ( Content Delivery Network).
+
+[17] A security group acts as a virtual firewall for your instance to control inbound and outbound traffic. When you launch an instance in a VPC, you can assign up to five security groups to the instance.
+
 ```diff
 ----------------------------------------------------------------------------------------------------------
 ! Author :
