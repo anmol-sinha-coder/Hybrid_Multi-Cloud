@@ -157,7 +157,7 @@ ________________________________________________________________________________
 
 
 
-	resource "local_file" "kingston" {
+	resource "local_file" "auth" {
 	    filename = "My_SSH.pem"
 	}
 
