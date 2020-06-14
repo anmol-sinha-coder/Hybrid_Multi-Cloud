@@ -4,7 +4,7 @@ Terraform is an open-source infrastructure as code (IAC) software tool created b
 _________________________________________________________________________________________________________________________
 ![terra](https://www.terraform.io/assets/images/docs/registry-publish-14c12da0.gif)
 ## Procedure
-* Here we plan on using Programming Documentation based multi-cloud architecture to deploy the products with AWS as provider.
+* Here we plan on using Programming Documentation based multi-cloud architecture to deploy the products with AWS as provider. Terraform files require the use of HashiCorp's standard HCL Language.
 * The first step would be credentials validation, for reference use --> [click here](https://www.terraform.io/docs/providers/aws/index.html)
 * It is essential to keep track of correct JSON like syntax of the **'*.tf'** file which we shall create, for reference-->[click here](https://www.terraform.io/docs/configuration/syntax.html)
 * Further use of terraform keywords like 'resources', 'provisioner', instance_type and others a document is created with reference link-->[click here](https://www.terraform.io/docs/configuration/resources.html)
