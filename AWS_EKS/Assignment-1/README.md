@@ -6,7 +6,7 @@ click through wizard , use our course VPC and all 3 AZs
 # add amazon-efs-utils
 install the package *amazon-efs-utils* on all worker nodes
 
-
+Used technologies like fargate via Amazon web services.
 ```
 ssh -i <<eks-course.pem>> ec2-user@<<ec2-workernode>> "sudo yum install -y amazon-efs-utils"
 ```
