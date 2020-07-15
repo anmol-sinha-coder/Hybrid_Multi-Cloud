@@ -13,7 +13,7 @@ Used technologies like fargate via Amazon web services.
 ```
 ssh -i <<eks-course.pem>> ec2-user@<<ec2-workernode>> "sudo yum install -y amazon-efs-utils"
 ```
-## Terraform Integration <img src="https://www.datocms-assets.com/2885/1506458597-blog-terraform-list.svg" width=200 height=300></img>
+# <img src="https://www.datocms-assets.com/2885/1506458597-blog-terraform-list.svg" width=200 height=300></img> Integration
 Lets work with terraform....after all, documentated codng using JSON format of coding (Here we call it HashiCorp Language or HCL) is easier to understand and implement. For reference you must look for the following documents:-
 
 * For using the basic EKS cluster, which manages and controls AWS k8s --> [click here](https://www.terraform.io/docs/providers/aws/r/eks_cluster.html)
