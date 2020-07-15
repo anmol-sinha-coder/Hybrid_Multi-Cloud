@@ -1,5 +1,7 @@
 # Hybrid_Multi-Cloud
+<p>
 <img src="https://thumbs.gfycat.com/CompassionateSecretGodwit-max-1mb.gif"></img> <img src="https://www.researchgate.net/profile/Antonius_Wijanarto/publication/279181777/figure/fig2/AS:294433330352130@1447209784914/GIS-Cloud-Architecture-15.png" width=400 height=300></img>
+</p>
 
 Cloud computing is the on-demand availability of computer system resources, especially data storage (cloud storage) and computing power, without direct active management by the user. The term is generally used to describe data centers available to many users over the Internet. Large clouds, predominant today, often have functions distributed over multiple locations from central servers. If the connection to the user is relatively close, it may be designated an edge server.
 
