@@ -277,3 +277,54 @@ Lets work with terraform....after all, documentated codng using JSON format of c
       ]
     }
 ```
+# Getting Started
+### Some Pre-Requisites:
+You need to have an AWS account. It cannot be the Starter Program since EKS is not supported there. Secondly, you must have a basic knowledge of AWS and Kubernetes. Third, you must have AWS CLI set up in your system with a dedicated profile allowing ADMIN Access so that it can directly use the EKS.
+
+Although AWS CLI provides commands to manage EKS, but they are not efficient enough to perform complex tasks. Therefore, we are going to use another CLI built especially for EKS. Apart from that, we need to have kubectl installed in our system too, for communicating with the Pods running on EKS. It is a managed service so everything will be managed by it except kubectl command because it is a client program, which will help us to connect with the pods.
+
+## Starting the EKS Cluster
+
+To start the EKS cluster, we need to set up a YAML file containing the infrastructure of the cluster. Information like the number of Worker Nodes, allowed EC2 instances, AWS key for connecting the instances with our local terminal and many more, are mentioned in this file.
+
+After we write the desired infrastructure in our YAML file, we will have to execute the file with the EKSCTL CLI we have installed.
+
+    $ eksctl create cluster -f cluster.yaml
+    
+## Setting up the kubectl CLI
+
+After the cluster is launched, we need to connect our system with the pods so that we can work on the cluster. Kubernetes has been installed in the instances already by EKS. Therefore to connect our kubectl with the Kubernetes on the instances, we need to update the KubeConfiguration file first. For this, we use the following command:
+
+    aws eks update-kubeconfig  --name cluster1
+
+We can check the connectivity with the command: 'kubectl cluster-info'
+For finding the number of nodes: 'kubectl get nodes'
+
+For finding the number of pods: 'kubectl get pods'
+
+To get detailed information of the instances on which the pods are running: kubectl get pods -o wide
+
+Before we work, we need to create a namespace for our application in the K8s.
+
+For that we use the following command: kubectl create namespace wp-msql
+
+Now we have to set it to be the default Namespace:
+
+    kubectl config set-context --current --namespace=wp-msql
+
+For checking how many pods is running inside the namespace ‘kube-system’ we have to execute : kubectl get pods -n kube-system
+Installing WordPress and MySQL
+
+Now, we are ready to install WordPress and Mysql in our cluster. For that, we need to copy the 3 files given below in a folder.
+
+This file contains information about the different settings to be applied to our MySQL pod.
+
+Similarly, this file contains information about the different settings to be applied to our WordPress pod.
+
+At last, we create a Kustomization file to specify the order of execution of the files along with the secret keys.
+
+After putting the above scripts in a folder, we can build the infrastructure using the following command: 'kubectl create -k'
+
+Our WordPress server along with MySQL is now launched in the EKS!
+
+To customize the site, we need a URL to visit. For that, we will be using the Public DNS provided by the External Load Balancer (ELB).
