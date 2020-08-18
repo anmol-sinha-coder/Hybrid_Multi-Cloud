@@ -42,7 +42,7 @@ Whenever we work with K8s, we at first have to create a cluster. A cluster conta
 The job of the Master Node is to schedule and monitor the logs of the containers running inside the pods, present inside the Worker Nodes. Whenever a client requests a Pod to be launched to the Master, the client connects to the API server at port 6443 of the master. Then the Master takes the client request to the Kubelet program present at the Worker Nodes. Based on the request, the Kubelet program communicates with internal docker engine to perform the required job.
 
 Some of the other services running across the cluster:
-[*]On Master Nodes:
+<br/>[*]On Master Nodes:
 
     etcd: It stores the configuration information which can be used by each of the nodes in the cluster. Here the Master store permanent data like secrets i.e key-value information, config files etc.
     API Server: Kubernetes is an API server which provides all the operation on the cluster using the API.
