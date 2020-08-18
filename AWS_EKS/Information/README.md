@@ -29,13 +29,11 @@ Till now, it seems nice! But now imagine a situation where you are building a la
 The need for Container Orchestration Services
 
 Wouldn’t be it better if there’s a service which is continuously running in the background and is managing all the containers together? Whenever a container crashes, it would automatically re-launch it and when the traffic to the website increases, instantly it will scale up the infrastructure by deploying more containers to balance the load.
-Image for post
-Image for post
+<img src="https://miro.medium.com/max/792/1*MJsy2bQcs1ttstltT0DLXA.png">
 
 In Kubernetes, the atomic unit of scheduling in Pod. Pods are slightly different from containers. We can run multiple containers in a single pod but not vice-versa. This comes very conveniently when we have containers which are fully dependent on each other, e.g. WordPress and MySQL are dependent since all data from WordPress would be stored in MySQL.
 Understanding the Architecture of Kubernetes
-Image for post
-Image for post
+<img src="https://miro.medium.com/max/840/1*gF9c3FRuqlamdqAMtVVkGA.png">
 
 Whenever we work with K8s, we at first have to create a cluster. A cluster contains a Master node and several Worker nodes or slaves.
 
