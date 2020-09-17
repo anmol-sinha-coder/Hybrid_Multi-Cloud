@@ -1,4 +1,4 @@
-# Hybrid Cloud/GCP
+# Google Cloud Platform
 Deploying WordPress with MySQL on Top of Google Cloud Platform
 A brief explanation of different tools and services used along with a complete walkthrough of the installation process
 _______________________________________________________________________
