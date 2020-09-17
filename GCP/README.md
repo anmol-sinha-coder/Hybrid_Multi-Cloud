@@ -127,9 +127,9 @@ Image for post
 Back from the CLI, we enter the username and password set for the DB, to login and create the database.
 Image for post
 Image for post
-
-gcloud sql databases create <name> --instance=<sql instance name>
-
+```diff
+# gcloud sql databases create <name> --instance=<sql instance name>
+```
 Google Kubernetes Engine (GKE)
 
 Google Kubernetes Engine (GKE) provides a managed environment for deploying, managing, and scaling your containerized applications using Google infrastructure. The GKE environment consists of multiple machines (specifically, Compute Engine instances) grouped together to form a cluster.
